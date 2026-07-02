@@ -1,0 +1,13 @@
+# Otic Fortress CODEOWNERS
+
+# Default owners for all repository files
+* @malinzijeremiah01-lab
+
+# Documentation
+/docs/ @malinzijeremiah01-lab
+
+# Backend
+/BACKEND/ @malinzijeremiah01-lab
+
+# GitHub governance and workflows
+/.github/ @malinzijeremiah01-lab
