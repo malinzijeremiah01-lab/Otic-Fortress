@@ -26,10 +26,20 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          cd BACKEND
+          cd backend
           npm install
+
+      - name: Run Tests
+        run: |
+          cd backend
+          npm test --if-present
+
+      - name: Lint Code
+        run: |
+          cd backend
+          npm run lint --if-present
 
       - name: Verify Project
         run: |
-          cd BACKEND
+          cd backend
           node -e "console.log('Fortress CI passed successfully')"
