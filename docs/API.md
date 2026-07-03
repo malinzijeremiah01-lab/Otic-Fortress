@@ -38,4 +38,13 @@ The Users API manages user accounts, profiles, roles, and permissions within the
 
 All endpoints are prefixed with:
 
+## Organizations API
+
+The Organizations API manages multi-tenant structures within Otic Fortress.
+
+An organization represents a company, team, or group that contains users, AI agents, and resources.
+
+All endpoints are prefixed with:
+
+
 
