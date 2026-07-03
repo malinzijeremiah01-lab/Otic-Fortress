@@ -54,6 +54,15 @@ AI agents are intelligent entities that perform tasks, respond to events, and in
 
 All endpoints are prefixed with:
 
+## AI Shadow API
+
+The AI Shadow API is responsible for monitoring, logging, and analyzing all AI agent activities within Otic Fortress.
+
+It provides transparency, auditability, and behavioral insights for AI systems operating inside an organization.
+
+All endpoints are prefixed with:
+
+
 
 
 
