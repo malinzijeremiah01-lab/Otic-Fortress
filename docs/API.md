@@ -46,5 +46,14 @@ An organization represents a company, team, or group that contains users, AI age
 
 All endpoints are prefixed with:
 
+## AI Agents API
+
+The AI Agents API manages the lifecycle, configuration, and execution of AI agents within Otic Fortress.
+
+AI agents are intelligent entities that perform tasks, respond to events, and interact with users and systems on behalf of an organization.
+
+All endpoints are prefixed with:
+
+
 
 
