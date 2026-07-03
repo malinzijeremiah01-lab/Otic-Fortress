@@ -25,3 +25,9 @@ All API requests require a valid Bearer Token.
 
 ```http
 Authorization: Bearer <access_token>
+
+## Authentication API
+
+The Authentication API handles user identity, login, registration, session management, and token lifecycle.
+
+All authentication endpoints are prefixed with:
