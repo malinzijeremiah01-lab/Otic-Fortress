@@ -31,3 +31,11 @@ Authorization: Bearer <access_token>
 The Authentication API handles user identity, login, registration, session management, and token lifecycle.
 
 All authentication endpoints are prefixed with:
+
+## Users API
+
+The Users API manages user accounts, profiles, roles, and permissions within the Otic Fortress system.
+
+All endpoints are prefixed with:
+
+
