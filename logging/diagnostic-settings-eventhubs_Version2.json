@@ -1,0 +1,47 @@
+name=diagnostic-settings-eventhubs.json
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "resources": [
+    {
+      "type": "Microsoft.Insights/diagnosticSettings",
+      "apiVersion": "2021-05-01-preview",
+      "name": "[concat(parameters('eventHubName'), '/diag')]",
+      "scope": "[resourceId('Microsoft.EventHub/namespaces/eventhubs', parameters('namespaceName'), parameters('eventHubName'))]",
+      "properties": {
+        "storageAccountId": "[parameters('archiveStorageAccountId')]",
+        "eventHubAuthorizationRuleId": "[parameters('destinationEventHubAuthRuleId')]",
+        "eventHubName": "[parameters('destinationEventHubName')]",
+        "workspaceId": "[parameters('logAnalyticsWorkspaceId')]",
+        "metrics": [
+          {
+            "category": "AllMetrics",
+            "enabled": true,
+            "retentionPolicy": {
+              "enabled": false,
+              "days": 0
+            }
+          }
+        ],
+        "logs": [
+          {
+            "category": "OperationalLogs",
+            "enabled": true,
+            "retentionPolicy": {
+              "enabled": false,
+              "days": 0
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "parameters": {
+    "namespaceName": { "type": "string" },
+    "eventHubName": { "type": "string" },
+    "archiveStorageAccountId": { "type": "string" },
+    "destinationEventHubName": { "type": "string" },
+    "destinationEventHubAuthRuleId": { "type": "string" },
+    "logAnalyticsWorkspaceId": { "type": "string" }
+  }
+}

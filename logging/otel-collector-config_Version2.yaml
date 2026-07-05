@@ -1,0 +1,45 @@
+name=otel-collector-config.yaml
+# OpenTelemetry Collector configuration (example)
+# - Receives OTLP over gRPC/HTTP from instrumented apps
+# - Exports to Azure Monitor (azuremonitor exporter) and to an Event Hub (for SIEM)
+#
+# Replace <AZURE_MONITOR_CONNECTION_STRING> and <EVENTHUB_CONNECTION_STRING> with secure references (Key Vault).
+receivers:
+  otlp:
+    protocols:
+      grpc:
+      http:
+
+processors:
+  batch:
+
+exporters:
+  azuremonitor:
+    # Use connection string from environment or keyvault mounting in runtime
+    connection_string: "${AZURE_MONITOR_CONNECTION_STRING}"
+  otlp/backup:
+    endpoint: "<backup-otlp-endpoint:4317>"
+  eventhub:
+    # This exporter uses a generic kafka/http-compatible exporter to forward to Event Hubs.
+    # Replace with your preferred method or a custom exporter.
+    endpoint: "${EVENTHUB_HTTP_ENDPOINT}"  # e.g. https://<namespace>.servicebus.windows.net/<hub>/messages
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [azuremonitor, eventhub]
+    metrics:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [azuremonitor]
+    logs:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [azuremonitor, eventhub]
+
+# Notes:
+# - Deploy the collector in a secure environment (AKS, Container App, VM) with managed identity access to secrets.
+# - Configure environment variables (AZURE_MONITOR_CONNECTION_STRING, EVENTHUB_HTTP_ENDPOINT) via platform secret injection (Key Vault).
+# - For high-throughput telemetry, scale collector instances and use partitioned upstream sinks (Event Hubs).

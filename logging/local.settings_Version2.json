@@ -1,0 +1,12 @@
+name=local.settings.json
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "APPLICATIONINSIGHTS_CONNECTION_STRING": "<APPLICATION_INSIGHTS_CONNECTION_STRING>",
+    "OTEL_EXPORTER_OTLP_ENDPOINT": "http://localhost:4317",
+    "OTEL_SERVICE_NAME": "fortress-<service-name>",
+    "OTEL_RESOURCE_ATTRIBUTES": "environment=dev,service.instance.id=local"
+  }
+}
