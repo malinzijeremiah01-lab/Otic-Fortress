@@ -1,0 +1,2 @@
+class OverdueReviewJob:
+    pass

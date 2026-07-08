@@ -1,0 +1,3 @@
+# redpanda
+
+Local infrastructure notes.

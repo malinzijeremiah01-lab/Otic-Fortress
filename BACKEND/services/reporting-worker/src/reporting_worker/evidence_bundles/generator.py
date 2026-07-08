@@ -1,0 +1,2 @@
+class EvidenceBundleGenerator:
+    pass

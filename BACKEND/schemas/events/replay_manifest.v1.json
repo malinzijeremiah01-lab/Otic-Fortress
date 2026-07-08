@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "required": [
+    "replay_id",
+    "source_prefix"
+  ],
+  "properties": {
+    "replay_id": {
+      "type": "string"
+    },
+    "source_prefix": {
+      "type": "string"
+    },
+    "reason": {
+      "type": "string"
+    }
+  }
+}

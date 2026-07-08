@@ -1,0 +1,3 @@
+# observability
+
+Local infrastructure notes.

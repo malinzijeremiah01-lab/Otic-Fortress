@@ -1,0 +1,2 @@
+class BoardMetrics:
+    pass

@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "required": [
+    "decision_id",
+    "tenant_id"
+  ],
+  "properties": {
+    "decision_id": {
+      "type": "string"
+    },
+    "tenant_id": {
+      "type": "string"
+    },
+    "trace_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

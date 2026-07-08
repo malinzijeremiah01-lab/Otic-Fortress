@@ -1,0 +1,15 @@
+[project]
+name = "otic-fortress-backend"
+version = "0.1.0"
+description = "Otic Fortress backend workspace"
+requires-python = ">=3.11"
+
+[tool.uv.workspace]
+members = ["packages/*", "services/*"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "services", "packages"]
+pythonpath = ["packages/fortress-core/src", "packages/fortress-events/src", "packages/fortress-policy/src", "packages/fortress-messaging/src", "packages/fortress-storage/src", "packages/fortress-auth/src", "packages/fortress-ai/src", "packages/fortress-observability/src", "packages/fortress-sdk/src"]

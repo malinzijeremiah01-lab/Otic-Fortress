@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "required": [
+    "agent_id",
+    "tool_name",
+    "action_name"
+  ],
+  "properties": {
+    "agent_id": {
+      "type": "string"
+    },
+    "tool_name": {
+      "type": "string"
+    },
+    "action_name": {
+      "type": "string"
+    }
+  }
+}

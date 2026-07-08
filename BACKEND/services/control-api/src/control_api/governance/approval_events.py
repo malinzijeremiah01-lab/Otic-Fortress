@@ -1,0 +1,2 @@
+class ApprovalEventPublisher:
+    pass

@@ -1,0 +1,2 @@
+class GovernanceDenied(Exception):
+    pass
