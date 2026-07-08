@@ -26,5 +26,3 @@ MinIO
 OpenTelemetry Collector
 Jaeger
 ```
-
-Temporal is intentionally not part of v1.
