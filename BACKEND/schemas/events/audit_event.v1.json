@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "required": [
+    "record_id",
+    "record_type",
+    "current_hash"
+  ],
+  "properties": {
+    "record_id": {
+      "type": "string"
+    },
+    "record_type": {
+      "type": "string"
+    },
+    "current_hash": {
+      "type": "string"
+    }
+  }
+}

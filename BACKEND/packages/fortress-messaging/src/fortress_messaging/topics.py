@@ -1,0 +1,8 @@
+RAW_TELEMETRY = "fortress.raw.telemetry"
+NORMALIZED_EVENTS = "fortress.normalized.events"
+ACTIVITY_RECORDS = "fortress.activity.records"
+FINDINGS = "fortress.findings"
+AUDIT_EVENTS = "fortress.audit.events"
+DLQ_TELEMETRY = "fortress.dlq.telemetry"
+DLQ_TRANSFORMATION = "fortress.dlq.transformation"
+REPLAY_TELEMETRY = "fortress.replay.telemetry"

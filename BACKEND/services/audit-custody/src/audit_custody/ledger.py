@@ -1,0 +1,2 @@
+class AuditLedger:
+    pass

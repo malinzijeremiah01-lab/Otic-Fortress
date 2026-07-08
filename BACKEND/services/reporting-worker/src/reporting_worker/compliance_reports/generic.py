@@ -1,0 +1,2 @@
+class GenericComplianceReport:
+    pass

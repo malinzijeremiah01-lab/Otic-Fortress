@@ -1,0 +1,23 @@
+{
+  "type": "object",
+  "required": [
+    "reason"
+  ],
+  "properties": {
+    "original_event_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reason": {
+      "type": "string"
+    },
+    "raw_payload_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

@@ -1,0 +1,2 @@
+class ActivityRecordService:
+    pass

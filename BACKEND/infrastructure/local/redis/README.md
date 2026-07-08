@@ -1,0 +1,3 @@
+# redis
+
+Local infrastructure notes.

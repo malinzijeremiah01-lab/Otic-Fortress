@@ -1,0 +1,2 @@
+class IRAReport:
+    pass
