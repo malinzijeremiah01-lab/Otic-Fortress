@@ -11,5 +11,6 @@ members = ["packages/*", "services/*"]
 line-length = 100
 
 [tool.pytest.ini_options]
+addopts = ["--import-mode=importlib"]
 testpaths = ["tests", "services", "packages"]
-pythonpath = ["packages/fortress-core/src", "packages/fortress-events/src", "packages/fortress-policy/src", "packages/fortress-messaging/src", "packages/fortress-storage/src", "packages/fortress-auth/src", "packages/fortress-ai/src", "packages/fortress-observability/src", "packages/fortress-sdk/src"]
+pythonpath = ["packages/fortress-core/src", "packages/fortress-events/src", "packages/fortress-policy/src", "packages/fortress-messaging/src", "packages/fortress-storage/src", "packages/fortress-auth/src", "packages/fortress-ai/src", "packages/fortress-observability/src", "packages/fortress-sdk/src", "services/activity-api/src", "services/activity-pipeline-worker/src", "services/ingestion-api/src", "services/control-api/src", "services/governance-worker/src", "services/audit-custody/src", "services/dashboard-bff/src", "services/delivery-worker/src", "services/intelligence-worker/src", "services/reporting-worker/src"]
