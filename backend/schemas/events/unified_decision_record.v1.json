@@ -1,0 +1,81 @@
+{
+  "type": "object",
+  "required": [
+    "decision_id",
+    "tenant_id"
+  ],
+  "properties": {
+    "decision_id": {
+      "type": "string"
+    },
+    "tenant_id": {
+      "type": "string"
+    },
+    "trace_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "agent_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "user_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "model_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "tool_calls": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "policy_evaluations": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "enforcement_decisions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "approvals": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "risk_signals": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "anomaly_findings": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "evidence_hash": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

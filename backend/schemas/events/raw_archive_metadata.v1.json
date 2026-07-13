@@ -1,0 +1,34 @@
+{
+  "type": "object",
+  "required": [
+    "archive_id",
+    "tenant_id",
+    "object_key",
+    "content_hash",
+    "archived_at"
+  ],
+  "properties": {
+    "archive_id": {
+      "type": "string"
+    },
+    "tenant_id": {
+      "type": "string"
+    },
+    "event_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "object_key": {
+      "type": "string"
+    },
+    "content_hash": {
+      "type": "string"
+    },
+    "archived_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}
